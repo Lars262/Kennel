@@ -32,6 +32,7 @@ public class Connector {
 
     public static void setDBCredentials() {
         String deployed = System.getenv("DEPLOYED");
+        deployed = null;
         if (deployed != null){
             // Prod: hent variabler fra setenv.sh i Tomcats bin folder
             URL = System.getenv("JDBC_CONNECTION_STRING");
@@ -41,7 +42,7 @@ public class Connector {
             // Localhost
             URL = "jdbc:mysql://localhost:3306/useradmin?serverTimezone=CET&useSSL=false";
             USERNAME = "root";
-            PASSWORD = "root";
+            PASSWORD = "997865root";
         }
     }
 
